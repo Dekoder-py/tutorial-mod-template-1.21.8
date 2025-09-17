@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "tutorialmod",
+  "version": "${version}",
+  "name": "Tutorial Mod",
+  "description": "This is a tutorial mod!",
+  "authors": [
+    "Dekoder-py"
+  ],
+  "contact": {
+    "homepage": "https://dekoder-py.hackclub.app/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/tutorialmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "co.dekoderpy.tutorialmod.TutorialMod"
+    ],
+    "fabric-datagen": [
+      "co.dekoderpy.tutorialmod.TutorialModDataGenerator"
+    ],
+    "client": [
+      "co.dekoderpy.tutorialmod.TutorialModClient"
+    ]
+  },
+  "mixins": [
+    "tutorialmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
