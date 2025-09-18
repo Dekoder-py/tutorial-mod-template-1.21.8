@@ -18,6 +18,9 @@ public class ModBlocks {
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block", AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK));
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", AbstractBlock.Settings.create().strength(3f).requiresTool());
 
+    public static final Block BLUE_GEMSTONE_BLOCK = registerBlock("blue_gemstone_block", AbstractBlock.Settings.create().strength(3f).requiresTool());
+
+
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
@@ -39,6 +42,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(PINK_GARNET_BLOCK);
             entries.add(RAW_PINK_GARNET_BLOCK);
+            entries.add(BLUE_GEMSTONE_BLOCK);
         });
     }
 }
