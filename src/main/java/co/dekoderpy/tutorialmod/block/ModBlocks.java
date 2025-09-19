@@ -1,6 +1,7 @@
 package co.dekoderpy.tutorialmod.block;
 
 import co.dekoderpy.tutorialmod.TutorialMod;
+import co.dekoderpy.tutorialmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -23,6 +24,7 @@ public class ModBlocks {
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(3f).requiresTool().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "pink_garnet_ore")))));
     public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE).registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "pink_garnet_deepslate_ore")))));
 
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "magic_block")))));
 
     public static final Block BLUE_GEMSTONE_BLOCK = registerBlock("blue_gemstone_block", new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "blue_gemstone_block")))));
 
@@ -51,6 +53,8 @@ public class ModBlocks {
 
             entries.add(PINK_GARNET_ORE);
             entries.add(PINK_GARNET_DEEPSLATE_ORE);
+
+            entries.add(MAGIC_BLOCK);
 
             entries.add(BLUE_GEMSTONE_BLOCK);
         });
