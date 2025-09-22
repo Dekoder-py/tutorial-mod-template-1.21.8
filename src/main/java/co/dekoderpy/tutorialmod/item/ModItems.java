@@ -17,6 +17,8 @@ public class ModItems {
 
     public static final ChiselItem CHISEL = registerChiselItem("chisel", new Item.Settings().maxDamage(32));
 
+    public static final Item CAULIFLOWER = registerItem("cauliflower", new Item.Settings().food(ModFoodComponents.CAULIFLOWER));
+
     private static ChiselItem registerChiselItem(String name, Item.Settings itemSettings) {
 
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name));
@@ -47,6 +49,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(CHISEL);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(CAULIFLOWER);
         });
     }
 }
