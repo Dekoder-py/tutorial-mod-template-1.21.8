@@ -2,9 +2,7 @@ package co.dekoderpy.tutorialmod.item;
 
 import co.dekoderpy.tutorialmod.TutorialMod;
 import co.dekoderpy.tutorialmod.item.custom.ChiselItem;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -18,6 +16,8 @@ public class ModItems {
     public static final ChiselItem CHISEL = registerChiselItem("chisel", new Item.Settings().maxDamage(32));
 
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item.Settings().food(ModFoodComponents.CAULIFLOWER));
+
+    public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item.Settings());
 
     private static ChiselItem registerChiselItem(String name, Item.Settings itemSettings) {
 
@@ -42,17 +42,6 @@ public class ModItems {
     public static void registerModItems() {
         TutorialMod.LOGGER.info("Registering Mod Items for " + TutorialMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(PINK_GARNET);
-            entries.add(RAW_PINK_GARNET);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(CHISEL);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
-            entries.add(CAULIFLOWER);
-        });
+        
     }
 }
