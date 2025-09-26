@@ -46,4 +46,5 @@ public class MagicBlock extends Block {
 
         super.onSteppedOn(world, pos, state, entity);
     }
+
 }

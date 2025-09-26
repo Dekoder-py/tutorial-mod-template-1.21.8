@@ -10,5 +10,9 @@
   "item.tutorialmod.chisel": "Chisel",
   "item.tutorialmod.magic_block": "Magic Block",
   "item.tutorialmod.cauliflower": "Cauliflower",
-  "item.tutorialmod.starlight_ashes": "Starlight Ashes"
+  "item.tutorialmod.starlight_ashes": "Starlight Ashes",
+  "tooltip.tutorialmod.magic_block.tooltip": "This block is very, very, very §9magical§r!",
+  "tooltip.tutorialmod.chisel": "Hold §eshift§r for more info",
+  "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks!",
+  "tooltip.tutorialmod.cauliflower.tooltip": "Healthy eating isn't always the best ;)"
 }
